@@ -16,7 +16,7 @@ class StatusController extends Controller
     {
         $status = Status::all();
 
-        return view('status.status', compact('status'));
+        return view('status.allStatus', compact('status'));
     }
 
     /**
@@ -26,7 +26,9 @@ class StatusController extends Controller
      */
     public function create()
     {
-        return view('status.status-form');
+        $action = 'StatusController@store';
+        $method = 'POST';
+        return view('status.status-form')->with(['action' => $action, 'method' => $method]);
     }
 
     /**
@@ -63,7 +65,9 @@ class StatusController extends Controller
      */
     public function edit(Status $status)
     {
-        return view('status.status-form')->with('status', $status);
+        $action = ['StatusController@update', $status];
+        $method = 'PUT';
+        return view('status.status-form')->with(['action' => $action, 'method' => $method, 'status' => $status]);
     }
 
     /**
