@@ -15,7 +15,7 @@ class PlaceController extends Controller
      */
     public function index()
     {
-        //
+        return $places = Place::all();
     }
 
     /**
@@ -23,9 +23,9 @@ class PlaceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function new()
     {
-        //
+        return view('places.place-form-new');
     }
 
     /**
@@ -36,7 +36,9 @@ class PlaceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $place = new Place;
+        $place->name = $request->name;
+        $place->establishment_id = $request->establishment_id;
     }
 
     /**
@@ -45,9 +47,9 @@ class PlaceController extends Controller
      * @param  \App\Place  $place
      * @return \Illuminate\Http\Response
      */
-    public function show(Place $place)
+    public function show(Place $placeId)
     {
-        //
+        return $place = Placce::find($placeId);
     }
 
     /**
@@ -56,9 +58,10 @@ class PlaceController extends Controller
      * @param  \App\Place  $place
      * @return \Illuminate\Http\Response
      */
-    public function edit(Place $place)
+    public function edit(Place $placeId)
     {
-        //
+        $place = Place::find($placeId);
+        return view('places.place-form-edit')->with('place', $place);
     }
 
     /**
@@ -68,9 +71,12 @@ class PlaceController extends Controller
      * @param  \App\Place  $place
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Place $place)
+    public function update(Request $request, Place $placeId)
     {
-        //
+        $place = Place::find($placeId);
+        $place->name = $reuest->name;
+        $place->establishment_id = $request->establishment_id;
+        $place->save();
     }
 
     /**
@@ -79,8 +85,11 @@ class PlaceController extends Controller
      * @param  \App\Place  $place
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Place $place)
+    public function destroy(Place $placeId)
     {
-        //
+        $place = Place::find($placeId);
+        $place->delete();
+        $places = Place::all();
+        return view('place.places')->with('places', $places);
     }
 }
