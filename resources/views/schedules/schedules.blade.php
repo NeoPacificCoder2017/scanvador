@@ -1,3 +1,6 @@
+@extends('layouts.template')
+
+@section('content')
 <a href="{{action('ScheduleController@create')}}"><button type="button" class="btn btn-primary btn-sm">Ajouter plannig</button></a>
 
 @foreach($schedules as $schedule)
@@ -14,3 +17,4 @@
         <li><a href="{{action('ScheduleController@show', $schedule)}}"><button type="button" class="btn btn-primary btn-sm">Afficher plannig</button></a></li>
     </ul>
 @endforeach
+@stop
