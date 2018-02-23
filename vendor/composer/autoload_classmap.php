@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\CategoryUsersType' => $baseDir . '/app/CategoryUsersType.php',
+    'App\\Check' => $baseDir . '/app/Check.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -14,6 +15,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\CategoryUsersTypeController' => $baseDir . '/app/Http/Controllers/CategoryUsersTypeController.php',
+    'App\\Http\\Controllers\\CheckController' => $baseDir . '/app/Http/Controllers/CheckController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\UserstypeController' => $baseDir . '/app/Http/Controllers/UserstypeController.php',
@@ -35,6 +37,7 @@ return array(
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
     'CategoryUsersTypesTableSeeder' => $baseDir . '/database/seeds/CategoryUsersTypesTableSeeder.php',
+    'ChecksTableSeeder' => $baseDir . '/database/seeds/ChecksTableSeeder.php',
     'Collective\\Html\\Componentable' => $vendorDir . '/laravelcollective/html/src/Componentable.php',
     'Collective\\Html\\Eloquent\\FormAccessible' => $vendorDir . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
     'Collective\\Html\\FormBuilder' => $vendorDir . '/laravelcollective/html/src/FormBuilder.php',
@@ -1373,6 +1376,7 @@ return array(
     'Illuminate\\Support\\Testing\\Fakes\\PendingMailFake' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Testing/Fakes/PendingMailFake.php',
     'Illuminate\\Support\\Testing\\Fakes\\QueueFake' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Testing/Fakes/QueueFake.php',
     'Illuminate\\Support\\Traits\\CapsuleManagerTrait' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Traits/CapsuleManagerTrait.php',
+    'Illuminate\\Support\\Traits\\Localizable' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Traits/Localizable.php',
     'Illuminate\\Support\\Traits\\Macroable' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Traits/Macroable.php',
     'Illuminate\\Support\\ViewErrorBag' => $vendorDir . '/laravel/framework/src/Illuminate/Support/ViewErrorBag.php',
     'Illuminate\\Translation\\ArrayLoader' => $vendorDir . '/laravel/framework/src/Illuminate/Translation/ArrayLoader.php',
