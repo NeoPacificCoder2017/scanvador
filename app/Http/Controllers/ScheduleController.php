@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 class ScheduleController extends Controller
 {
     /**
