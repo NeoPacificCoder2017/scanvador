@@ -13,16 +13,16 @@ class UsersTableSeeder extends Seeder
     {
         $users = [
             [
-                'first_name' => 'Administrator',
-                'last_name' => 'First',
+                'first_name' => 'christopher',
+                'last_name' => 'tuhiti',
                 'birth_date' => '20/01/1995',
-                'email' => 'administrator@hotmail.com',
+                'email' => 'ctuhiti@gmail.com',
                 'qr_code' => 'https://upload.wikimedia.org/wikipedia/commons/7/78/Qrcode_wikipedia_fr_v2clean.png',
                 'official_picture' => 'http://www.littlehearts.ind.in/wp-content/themes/lhs/Birthday/images/adm.png',
                 'profil_picture' =>'http://www.littlehearts.ind.in/wp-content/themes/lhs/Birthday/images/adm.png',
                 'phone_number' => '87272727',
                 'users_type_id' => 1,
-                'password' => bcrypt('administrator'),
+                'password' => bcrypt('secret'),
                 'class' => 'null',
                 'token' => '1111111',
                 'supervisor_name' => 'null',
