@@ -40,7 +40,16 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        $schedule = Schedule::create($request->all());
+        $schedule = new Schedule();
+        $schedule->task_id = $request->task_id;
+        $schedule->place_id = $request->place_id;
+        $schedule->start_at = $request->start_at;
+        $schedule->end_at = $request->end_at;
+        $schedule->constant_id_lateness = $request->constant_id_lateness;
+        $schedule->constant_id_absence = $request->constant_id_absence;
+        $schedule->teacher_id = $request->teacher_id;
+        $schedule->planner_id = Auth::id();
+        $schedule->save();
 
         return view('schedules.schedule-create-confirmation')->with('schedule', $schedule);
     }
@@ -79,7 +88,15 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, Schedule $schedule)
     {
-        $schedule->update($request->all());
+        $schedule->task_id = $request->task_id;
+        $schedule->place_id = $request->place_id;
+        $schedule->start_at = $request->start_at;
+        $schedule->end_at = $request->end_at;
+        $schedule->constant_id_lateness = $request->constant_id_lateness;
+        $schedule->constant_id_absence = $request->constant_id_absence;
+        $schedule->teacher_id = $request->teacher_id;
+        $schedule->planner_id = Auth::id();
+        $schedule->save();
 
         return view('schedules.schedule-update-confirmation')->with('schedule', $schedule);
     }
