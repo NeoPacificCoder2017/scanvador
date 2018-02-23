@@ -58,7 +58,7 @@ class EstablishmentController extends Controller
        * Met a jours le nom et le type de l'établissement
        */
     public function update(Request $request,$establishmentId){
-        Establishment::find(establishmentId)->update($request->all());
+        Establishment::find($establishmentId)->update($request->all());
         $establishment = Establishment::find($establishmentId);
         $input = $request->all();
 

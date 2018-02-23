@@ -34,5 +34,44 @@ class EstablishmentTypeController extends Controller
     /**
      * Enregistre un nouveau type d'établissement
      */
-    
+    public function create(Request $request){
+        $input = $request->all();
+        $establishment_type = new EstablishmentType();
+
+        $establishment_type->name = $input['name'];
+        $establishment_type->save();
+        return ;
+    }
+
+    /**
+     * Affiche le formulaire d'édition
+     */
+    public function edit($establishment_typeId){
+        $establishment_type = EstablishmentType::find($establishment_typeId);
+        return ;
+    }
+
+    /**
+     * Met a jour le nom du type de l'établissement
+     */
+    public function update(Request $request,$establishment_typeId){
+        EstablishmentType::find($establishment_typeId)->update($request->all());
+        $establishment_type = EstablishmentType::find($establishment_typeId);
+        $input = $request->all();
+
+        $establishment_type->name = $request->$inpput['name'];
+        $establishment_type->save();
+
+        return ;
+    }
+
+    /**
+     * Supprime le type d'établissement selectionner
+     */
+    public function destroy($establishment_typeId){
+        $establishment_type = EstablishmentType::find($establishment_typeId);
+        $establishment_type->delete();
+        return ;
+    }
+
 }
