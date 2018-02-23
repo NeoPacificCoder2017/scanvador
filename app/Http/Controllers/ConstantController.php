@@ -55,9 +55,10 @@ class ConstantController extends Controller
      * @param  \App\Constant  $constant
      * @return \Illuminate\Http\Response
      */
-    public function show(Constant $constant)
+    public function show($constant)
     {
-        //
+        $oneconstant = Constant::find($constant);
+        return view('constants.show', ['oneconstant'=>$oneconstant]);
     }
 
     /**
