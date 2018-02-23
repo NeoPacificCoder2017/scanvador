@@ -17,7 +17,7 @@ class EstablishmentController extends Controller
         return ;
      }
 
-     /**
+    /**
       * Affiche l'établissement selectionner
       */
     public function show($establishmentId){
@@ -26,9 +26,13 @@ class EstablishmentController extends Controller
     }
 
     /**
-     * 
+     * Affiche le formulaire pour la creation d'un nouvelle établissement
      */
-     /**
+    public function new(){
+        return ;//affiché la vue du formulaire
+    }
+
+    /**
       * Enregistre un nouvelle établissement
       */
     public function create(Request $request){
@@ -41,7 +45,7 @@ class EstablishmentController extends Controller
         return ;
       }
 
-      /**
+    /**
        * affiche le formulaire d'édition
        */
     public function edit($establishmentId){
@@ -49,11 +53,19 @@ class EstablishmentController extends Controller
           return ;
       }
 
-      /**
+    /**
        * Met a jours le nom et le type de l'établissement
        */
     public function update(){
 
     }
 
+    /**
+     * Supprime l'établissement selectionner
+     */
+    public function destroy($establishmentId){
+        $establishment = Establishment::find(establishmentId);
+        $establishment->delete();
+        return ;
+    }
 }
