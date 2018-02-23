@@ -56,12 +56,21 @@ class EstablishmentController extends Controller
     /**
        * Met a jours le nom et le type de l'établissement
        */
-    public function update(){
+    public function update(Request $request,$establishmentId){
+        Establishment::find(establishmentId)->update($request->all());
+        $establishment = Establishment::find($establishmentId);
+        $input = $request->all();
 
+        $establishment->name = $request->$input['name'];
+        $establishment->establishment_type_id = $request->$input['establishment_type_id'];
+
+        $establishment->save();
+
+        return ;
     }
 
     /**
-     * Supprime l'établissement selectionner
+     * Supprime l'établissement selectionner.
      */
     public function destroy($establishmentId){
         $establishment = Establishment::find(establishmentId);
