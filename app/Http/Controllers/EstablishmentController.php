@@ -25,10 +25,13 @@ class EstablishmentController extends Controller
         return ;
     }
 
+    /**
+     * 
+     */
      /**
       * Enregistre un nouvelle établissement
       */
-      public function new(Request $request){
+    public function create(Request $request){
         $input = $request->all();
 
         $establishment = new Establishment();
@@ -41,10 +44,16 @@ class EstablishmentController extends Controller
       /**
        * affiche le formulaire d'édition
        */
-      public function edit($establishmentId){
+    public function edit($establishmentId){
           $establishment = Establishment::find($establishmentId);
           return ;
       }
-      
+
+      /**
+       * Met a jours le nom et le type de l'établissement
+       */
+    public function update(){
+
+    }
 
 }
