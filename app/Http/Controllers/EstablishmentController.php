@@ -57,7 +57,7 @@ class EstablishmentController extends Controller
        * Met a jours le nom et le type de l'établissement
        */
     public function update(Request $request,$establishmentId){
-        Establishment::find(establishmentId)->update($request->all());
+        Establishment::find($establishmentId)->update($request->all());
         $establishment = Establishment::find($establishmentId);
         $input = $request->all();
 
@@ -73,7 +73,7 @@ class EstablishmentController extends Controller
      * Supprime l'établissement selectionner.
      */
     public function destroy($establishmentId){
-        $establishment = Establishment::find(establishmentId);
+        $establishment = Establishment::find($establishmentId);
         $establishment->delete();
         return ;
     }
