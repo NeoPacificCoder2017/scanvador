@@ -24,6 +24,7 @@ class EstablishmentController extends Controller
         $establishment = Establishment::find($establishmentId);
         return ;
     }
+
      /**
       * Enregistre un nouvelle établissement
       */
@@ -36,4 +37,14 @@ class EstablishmentController extends Controller
         $establishment->save();
         return ;
       }
+
+      /**
+       * affiche le formulaire d'édition
+       */
+      public function edit($establishmentId){
+          $establishment = Establishment::find($establishmentId);
+          return ;
+      }
+      
+
 }
