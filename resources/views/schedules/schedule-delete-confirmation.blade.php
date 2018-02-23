@@ -1,0 +1,3 @@
+delete success
+
+{!! dump($schedule) !!}
