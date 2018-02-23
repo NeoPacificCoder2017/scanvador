@@ -101,7 +101,38 @@
                         </ul>
                     </div>
                     <!-- /#sidebar-wrapper -->
+                    <div class="container">
+
+                            @if (session('error'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
                 
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+                
+                            @if (session('info'))
+                                <div class="alert alert-info">
+                                    {{ session('info') }}
+                                </div>
+                            @endif
+                
+                            @if (session('warning'))
+                                <div class="alert alert-warning">
+                                    {{ session('warning') }}
+                                </div>
+                            @endif
+                            {{-- <div id="main-content">
+                                <div class="container">
+                                    @yield('content')
+                                </div>
+                            </div> --}}
+                
+                        </div>
                     <!-- Page Content -->
                     <div id="page-content-wrapper">
                         <div class="container-fluid">
@@ -115,39 +146,7 @@
       </div>
     </div>
 
-        <div class="container">
-
-            @if (session('error'))
-                <div class="alert alert-danger">
-                    {{ session('error') }}
-                </div>
-            @endif
-
-            @if (session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-
-            @if (session('info'))
-                <div class="alert alert-info">
-                    {{ session('info') }}
-                </div>
-            @endif
-
-            @if (session('warning'))
-                <div class="alert alert-warning">
-                    {{ session('warning') }}
-                </div>
-            @endif
-            {{-- <div id="main-content">
-                <div class="container">
-                    @yield('content')
-                </div>
-            </div> --}}
-
-        </div>
-
+        
     </div>
 
     <!-- Scripts -->

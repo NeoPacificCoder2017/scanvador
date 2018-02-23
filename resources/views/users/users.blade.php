@@ -1,4 +1,7 @@
 @extends('layouts.template')
+
+@section('title', 'Utilisateurs')
+
 @section('content')
   <table class="table table-bordered table-hover">
     <thead>
