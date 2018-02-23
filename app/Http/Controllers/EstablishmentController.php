@@ -74,7 +74,7 @@ class EstablishmentController extends Controller
      * Supprime l'établissement selectionner.
      */
     public function destroy($establishmentId){
-        $establishment = Establishment::find(establishmentId);
+        $establishment = Establishment::find($establishmentId);
         $establishment->delete();
         return ;
     }
