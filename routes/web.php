@@ -18,7 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-<<<<<<< HEAD
 
 //-------------------------------- status_entity --------------------//
 Route::get('/status', 'StatusController@index')->name('status.index');
@@ -46,6 +45,3 @@ Route::get('/checks/{check}', 'CheckController@show')->name('checks.show');
 Route::get('/checks/{check}/edit', 'CheckController@edit')->name('checks.edit');
 Route::put('/checks/{check}', 'CheckController@update')->name('checks.update');
 Route::delete('/checks/{check}', 'CheckController@destroy')->name('checks.destroy');
-=======
-Route::get('/home/users', 'UserController@index');
->>>>>>> 8d27633381b4138001f1685b6d275332d96dcca2
