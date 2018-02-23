@@ -70,12 +70,26 @@ class UserController extends Controller
     {
         $user = new User();
         $data = $this->validate($request, [
-            'description'=>'required',
-            'title'=> 'required'
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+            'phone_number' => 'required',
+            'users_type_id' => 'required',
+            'password' => 'required',
+            'class' => 'required',
+            'birth_date' => 'required',
+            'official_picture' => 'required',
+            'profil_picture' => 'required',
+            'token' => 'required',
+            'supervisor_name' => 'required',
+            'supervisor_phone_number' => 'required',
+            'supervisor_mail' => 'required',
+            'establishment_id' => 'required',
+            'qr_code' => 'required'
         ]);
-        $ticket->updateTicket($data);
+        $user->updateUser($data);
 
-        return redirect('/home')->with('success', 'New support ticket has been updated!!');
+        return redirect('/home/users')->with('success', 'New support ticket has been updated!!');
     }
     
 }
