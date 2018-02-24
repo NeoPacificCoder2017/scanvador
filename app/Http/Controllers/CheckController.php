@@ -43,7 +43,7 @@ class CheckController extends Controller
         $check = new Check();
         $check->user_id = $request->user_id;
         $check->schedule_id = $request->schedule_id;
-        $check->checked_at = $request->checked_at;
+        $check->checked_at = now(); //------------------- a voir -------------------//
         $check->status_id = $request->status_id;
         $check->scanner_id = $request->scanner_id;
 
@@ -97,7 +97,7 @@ class CheckController extends Controller
     {
         $check->user_id = $request->user_id;
         $check->schedule_id = $request->schedule_id;
-        $check->checked_at = $request->checked_at;
+        $check->checked_at = now(); //--------------------- A voir :  ce champ est -il vraiment utile ------------------------//
         $check->status_id = $request->status_id;
         $check->scanner_id = $request->scanner_id;
 
